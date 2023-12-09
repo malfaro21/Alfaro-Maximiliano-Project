@@ -5,6 +5,7 @@
 #define PAGE_SIZE 256 // page size of 2^8 bytes.
 #define TLB_SIZE 16 // 16 entries in the TLB
 #define MEM_SIZE 65336 // physical memory is 65336 bytes
+#define page_entries 256 // 2^8 entries in the page table.
 
 int page_number(int logical_address);
 int extract_offset(int logical_address);
