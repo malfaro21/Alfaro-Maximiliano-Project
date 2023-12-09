@@ -2,7 +2,8 @@
 #include <stdlib.h>
 
 int page_number(int logical_address);
-int extract_offset(int ogical_address);
+int extract_offset(int logical_address);
+int translate_address(int logical_address);
 
 
 int extract_pagenum(int logical_address){
