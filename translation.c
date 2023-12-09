@@ -11,4 +11,3 @@ int extract_pagenum(int logical_address){
 int extract_offset(int logical_address){
     int Offset = logical_address & 0x00FF;
 }
-
