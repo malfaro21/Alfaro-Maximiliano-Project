@@ -10,9 +10,11 @@ char address[7]; //Store address
 
 int getPage(int logical_address){
     int pageNum = (logical_address >>8);
+    return pageNum;
 }
 int getOffSet(int logical_address){
     int offSet = (logical_address & 0x00FF);
+    return offSet;
 }
 
 int main(){
