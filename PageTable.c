@@ -14,7 +14,7 @@ int page_Fault_Counter = 0;
 void check_Page_Table(int page_Number){
     for (int i = 0; i < 256; i++){
         if (page_Table[i].vi_Bit == 1){
-            page_Fault_Counter++;
+            
         }
     }
 }
