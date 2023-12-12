@@ -6,6 +6,11 @@
 #define TLB_SIZE 16 // 16 entries in the TLB
 #define MEM_SIZE 65336 // physical memory is 65336 bytes
 #define PAGE_ENTRIES 256 // 2^8 entries in the page table.
+#define CHUNK 256 // amount of bytes we need to load into a frame
+
+int physical_Memory[MEM_SIZE];
+int frame_Counter = 0;
+signed char chunk_Store[CHUNK];
 
 
 
