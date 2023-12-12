@@ -8,8 +8,5 @@
 #define PAGE_ENTRIES 256 // 2^8 entries in the page table.
 
 
-int extract_page(int logical_address){
-    int page_number = (logical_address >> 8) & 0x00FF;
-    int offset = logical_address & 0x00FF;
-}
+
 
