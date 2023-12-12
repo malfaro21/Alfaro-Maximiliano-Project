@@ -3,7 +3,7 @@
 #include <string.h>
 
 struct page_Table_Cell{
-    int frame;
+    int page;
     int vi_Bit;
 };
 
