@@ -7,10 +7,6 @@
 #define MEM_SIZE 65336 // physical memory is 65336 bytes
 #define PAGE_ENTRIES 256 // 2^8 entries in the page table.
 
-int page_number(int logical_address);
-int extract_offset(int logical_address);
-int translate_address(int logical_address);
-int TLBhit = 0;
 
 int extract_page(int logical_address){
     int page_number = (logical_address >> 8) & 0x00FF;
