@@ -8,13 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-<<<<<<< HEAD
       "cwd": "/home/sgranados13/Documents/FinalProject/Group3-csci-320-Project",
       "program": "/home/sgranados13/Documents/FinalProject/Group3-csci-320-Project/build/Debug/outDebug",
-=======
-      "cwd": "/home/malfaro21/Documents/Final/Group3-csci-320-Project",
-      "program": "/home/malfaro21/Documents/Final/Group3-csci-320-Project/build/Debug/outDebug",
->>>>>>> ba16640a1f42642f37ee7c0d4e6a071dca4ab734
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
