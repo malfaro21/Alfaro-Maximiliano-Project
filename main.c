@@ -12,7 +12,7 @@ int page_Number;
 int offset;
 
 void getPage(int logical_address){
-    page_Number = (logical_address >>8);
+    page_Number = (logical_address >> 8);
 }
 void getOffSet(int logical_address){
     offset = (logical_address & 0x00FF);

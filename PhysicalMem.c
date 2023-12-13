@@ -15,15 +15,8 @@ signed char chunk_Store[CHUNK];
 void insert_Chunk(int page_Number){
     FILE *backing_Store = fopen("BACKING_STORE.bin", "rb");
 
-    if (fseek(backing_Store, page_Number * 256, SEEK_SET) != 0){
-        fprintf(stderr, "Error\n");
-        return;
-    }
-
-    if (fread(chunk_Store, sizeof(signed char), 256, backing_Store) == 0){
-        fprintf(stderr, "Error\n");
-        return;
-    }
+    fseek(backing_Store, page_Number * 256, SEEK_SET);
+    fread(chunk_Store, sizeof(signed char), 256, backing_Store);
 
     int chunk_Counter = 0;
 
@@ -31,10 +24,6 @@ void insert_Chunk(int page_Number){
         physical_Memory[i] = chunk_Store[chunk_Counter];
         chunk_Counter++;
     }
-
-    /* for (int i = 0; i < 256; i++){
-        printf("%d\n", chunk_Store[i]);
-    } */
 
     frame_Counter++;
 }
