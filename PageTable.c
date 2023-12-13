@@ -1,18 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "TLB.c"
-#include "main.c"
-#include "PhysicalMem.c"
-
-struct page_Table_Cell{
-    int frame;
-    int vi_Bit;
-};
-
-struct page_Table_Cell page_Table[256];
-
-int page_Fault_Counter = 0;
+#include "pageTable.h"
+#include "TLB.h"
+#include "main.h"
+#include "PhysicalMem.h"
+#include "functions.h"
 
 void check_Page_Table(int pageNumber){
     if (page_Table[page_Number].vi_Bit == 1){
@@ -28,7 +21,7 @@ void check_Page_Table(int pageNumber){
 
     }
 }
-void updateTLB(pageNumber){
+void updateTLB(int pageNumber){
     if(tlbCounter<15){
         TLB[tlbCounter].frame_number = page_Table[pageNumber].frame;
         TLB[tlbCounter].page_number = pageNumber;

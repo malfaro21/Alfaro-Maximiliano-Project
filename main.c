@@ -1,16 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "PhysicalMem.c"
+#include "pageTable.h"
+#include "TLB.h"
+#include "main.h"
+#include "PhysicalMem.h"
+#include "functions.h"
+#include "TLB.c"
 
-int logical_address;
-signed char value;
 FILE *address_file;
-int physical_address;
-char address[7]; //Store address
-
-int page_Number;
-int offset;
 
 void getPage(int logical_address){
     page_Number = (logical_address >> 8);
@@ -26,7 +24,8 @@ int main(){
         logical_address = atoi(address); // convert char array to int
         getPage(logical_address);
         getOffSet(logical_address);
-        // printf("logical address: %d, PageNumber: %d, Offset: %d\n", logical_address,getPage(logical_address), getOffSet(logical_address));
+        checktlb(page_Number);
+        printf("(%d, %d), %d, %d, %d\n", page_Number, offset, logical_address, physical_address, value);
     }
     
 }
