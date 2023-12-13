@@ -7,3 +7,16 @@
 int physical_Memory[MEM_SIZE];
 int frame_Counter = 0;
 signed char chunk_Store[CHUNK];
+int page_Number;
+int offset;
+signed char value;
+int checkpg = 0;
+int physical_address;
+char address[7]; //Store address
+int address_Counter = 0;
+float tlbHitRate = 0.0000;
+float pageFaultRate = 0.0000;
+
+void insert_Chunk(int page_Number);
+void getPage(int logical_address);
+void getOffset(int logical_address);
