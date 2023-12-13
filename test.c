@@ -130,7 +130,7 @@ int main(){
         getPage(logical_address);
         getOffSet(logical_address);
         checktlb(page_Number);
-        // printf("(%d, %d), %d, %d, %d\n", page_Number, offset, logical_address, physical_address, value);
+        printf("(%d, %d), %d, %d, %d\n", page_Number, offset, logical_address, physical_address, value);
     }
 
     for (int i = 0; i < 16; i++){
