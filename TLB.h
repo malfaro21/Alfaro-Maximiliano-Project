@@ -8,7 +8,7 @@ struct tlb_cell{
 struct tlb_cell TLB[TLB_SIZE];
 int tlbCounter = 0;
 int tlbmisscount = 0;
-int tlbhitcount = 1;
+int tlbhitcount = 0;
 
 void checktlb(int page);
 void tlbhit(int frame_number);
